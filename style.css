@@ -1,0 +1,211 @@
+:root {
+    /* Primary color */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients color */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral color */
+    --Neutral-White: hsl(0, 0%, 100%);
+    --Neutral-Pale-blue: hsl(221, 100%, 96%);
+    --Neutral-Light-lavender: hsl(241, 100%, 89%);
+    --Neutral-Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: fit-content;
+    margin: auto;
+    background-color: var(--Neutral-White);
+    border-radius: 25px;
+    box-shadow: 3px 30px 45px hsl(234deg 85% 45% / 9%);
+}
+
+@media (max-width: 767px) {
+    .main {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* Result Css */
+.result {
+    background-image: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    border-radius: 25px;
+    width: 250px;
+    padding: 30px 30px 40px 30px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .result {
+        width: 100%;
+        border-radius: 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+    }
+}
+
+.result>p {
+    color: var(--Neutral-Light-lavender);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.result .circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, var(--Persian-blue-circle), var(--Violet-blue-circle));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result .circle p:first-child {
+    color: var(--Neutral-White);
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: -4px;
+}
+
+.result .circle p:last-child {
+    color: hsl(241deg 100% 89% / 90%);
+    font-size: 11px;
+}
+
+.result .info-result h2 {
+    color: var(--Neutral-White);
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.result .info-result p {
+    font-size: 12px;
+    color: var(--Neutral-Light-lavender);
+}
+
+/* Summary Css */
+
+.summary {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    padding: 30px 30px 40px 30px;
+    max-width: 100%;
+}
+
+.summary>h2 {
+    align-self: flex-start;
+    font-size: 15px;
+    color: var(--Neutral-Dark-gray-blue);
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .summary {
+        width: 100%;
+    }
+
+    .summary>h2 {
+        align-self: center;
+    }
+}
+
+.summary .score {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.summary .score .grade {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 47px;
+    padding: 8px;
+}
+
+.summary .score .grade>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.summary .score .grade span.grade-total {
+    color: hsl(224, 30%, 27%, 50%);
+}
+
+.summary .score .grade span.grade-from {
+    color: var(--Neutral-Dark-gray-blue);
+    font-weight: bold;
+}
+
+.summary .score .reaction {
+    color: var(--Light-red);
+    background-color: hsl(0, 100%, 67%, 6%);
+}
+
+.summary .score .memory {
+    color: var(--Orangey-yellow);
+    background-color: hsl(39, 100%, 56%, 6%);
+}
+
+.summary .score .verbal {
+    color: var(--Green-teal);
+    background-color: hsl(166, 100%, 37%, 6%);
+}
+
+.summary .score .visual {
+    color: var(--Cobalt-blue);
+    background-color: hsl(234, 85%, 45%, 6%);
+}
+
+.summary .btn button {
+    padding: 9px;
+    width: 160px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--Neutral-Dark-gray-blue);
+    color: var(--Neutral-White);
+}
+
+.summary .btn button:hover {
+    background-color: var(--Light-royal-blue-background);
+}
